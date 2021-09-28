@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: prafael- <prafael-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/25 15:23:16 by prafael-          #+#    #+#             */
-/*   Updated: 2021/09/25 15:23:16 by prafael-         ###   ########.fr       */
+/*   Created: 2021/09/25 11:10:43 by prafael-          #+#    #+#             */
+/*   Updated: 2021/09/28 11:10:43 by prafael-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,4 +100,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i + j] = '\0';
 	return (str);
 }
-

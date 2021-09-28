@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: prafael- <prafael-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/25 15:08:47 by prafael-          #+#    #+#             */
-/*   Updated: 2021/09/25 15:08:47 by prafael-         ###   ########.fr       */
+/*   Created: 2021/09/28 11:10:55 by prafael-          #+#    #+#             */
+/*   Updated: 2021/09/28 11:10:55 by prafael-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,20 @@
 
 void	free_null(char **ptr)
 {
-	if(*ptr != NULL)
+	if (*ptr != NULL)
 	{
 		free(*ptr);
 		ptr = NULL;
 	}
 }
+
 char	*join_line(int nl_position, char **buffer)
 {
 	char	*res;
 	char	*tmp;
 
 	tmp = NULL;
-	if(nl_position <= 0 )
+	if (nl_position <= 0 )
 	{
 		if (**buffer == '\0')
 		{
@@ -42,7 +43,7 @@ char	*join_line(int nl_position, char **buffer)
 	res = *buffer;
 	res[nl_position] = 0;
 	*buffer = tmp;
-	return(res);
+	return (res);
 }
 
 char	*read_line(int fd, char **buffer, char *read_return)
@@ -51,7 +52,6 @@ char	*read_line(int fd, char **buffer, char *read_return)
 	char	*tmp;
 	char	*nl;
 
-
 	nl = ft_strchr(*buffer, '\n');
 	tmp = NULL;
 	bytes_read = 0;
@@ -59,14 +59,14 @@ char	*read_line(int fd, char **buffer, char *read_return)
 	{
 		bytes_read = read(fd, read_return, BUFFER_SIZE);
 		if (bytes_read <= 0)
-			return(join_line(bytes_read, buffer));
+			return (join_line(bytes_read, buffer));
 		read_return[bytes_read] = 0;
 		tmp = ft_strjoin(*buffer, read_return);
 		free_null(buffer);
 		*buffer = tmp;
 		nl = ft_strchr(*buffer, '\n');
 	}
-	return(join_line(nl - *buffer + 1, buffer));
+	return (join_line(nl - *buffer + 1, buffer));
 }
 
 char	*get_next_line(int fd)
@@ -78,8 +78,8 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0 || fd > MAX_FD)
 		return (NULL);
 	read_return = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1);
-	if(read_return == NULL)
-		return(NULL);
+	if (read_return == NULL)
+		return (NULL);
 	if (!buffer[fd])
 		buffer[fd] = ft_strdup("");
 	res = read_line(fd, &buffer[fd], read_return);

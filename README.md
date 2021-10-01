@@ -3,13 +3,24 @@
     <img alt="Paulo Rafael Ramalho" src="https://img.shields.io/badge/-Paulo Rafael-682998?style=flat&logo=Linkedin&logoColor=white" />
   </a>
 
-  <a href="https://github.com/Yaten/N/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/Yaten/Libft?color=682998&logo=github">
+  <a aria-label="Completed" href="https://www.42sp.org.br/">
+    <img src="https://img.shields.io/badge/42.sp-GNL-682998?logo="></img>
+  </a>
+
+  <a href="https://github.com/Yaten/42-get_next_line/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/Yaten/42-get_next_line?color=682998&logo=github">
   </a>
 
   <a href="https://github.com/Yaten/libft/commits/main">
     <img src="https://img.shields.io/github/last-commit/Yaten/libft?color=682998">
   </a>
+</p>
+<p align="center">
+  <a href="https://github.com/Yaten/42-get_next_line">
+    <img src="https://github.com/Yaten/Yaten/blob/main/img/gnl.png" alt="GNL 125/100">
+  </a>
+  <br>
+  125/100
 </p>
 
 ---
